@@ -1,0 +1,33 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Quantum Energy Teleportation with Quantum Computers
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Kazuki
+    family-names: Ikeda
+    affiliation: Stony Brook University
+    orcid: 'https://orcid.org/0000-0003-3821-2669'
+identifiers:
+  - type: url
+    value: >-
+      https://github.com/IKEDAKAZUKI/Quantum-Energy-Teleportation.git
+    description: Github
+abstract: >-
+  The complete quantum code for quantum energy teleportation
+  on an IBM quantum computer. You can demonstrate quantum
+  gate operations on a laptop using a classical emulator or
+  a real quantum computer. The default code works without an
+  IBM ID. No special knowledge is required.
+keywords:
+  - Quantum Energy Teleportation
+  - Quantum Computation
+  - IBM Q
+  - Qiskit
+license: MIT
+version: '1'
+date-released: '2023-02-22'
