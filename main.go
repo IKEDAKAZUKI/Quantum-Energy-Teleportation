@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"sort"
 	"strings"
 
 	"gitlab.com/gomidi/midi/writer"
@@ -46,7 +47,23 @@ func main() {
 		panic(err)
 	}
 
-	values := make(map[string]plotter.Values)
+	type Value struct {
+		Name   string
+		Values plotter.Values
+	}
+	values := make(map[string]Value)
+	values["00"] = Value{
+		Name: "00",
+	}
+	values["01"] = Value{
+		Name: "01",
+	}
+	values["10"] = Value{
+		Name: "10",
+	}
+	values["11"] = Value{
+		Name: "11",
+	}
 	v := plotter.Values{}
 	err = writer.WriteSMF("markov.mid", 1, func(wr *writer.SMF) error {
 		last := ""
@@ -58,9 +75,13 @@ func main() {
 			i := float64((bits[1] - '0') + 2*(bits[0]-'0'))
 			v = append(v, i)
 			if last == "" {
-				values["00"] = append(values["00"], i)
+				v := values["00"]
+				v.Values = append(values["00"].Values, i)
+				values["00"] = v
 			} else {
-				values[last] = append(values[last], i)
+				v := values[last]
+				v.Values = append(values[last].Values, i)
+				values[last] = v
 			}
 			if last == "" || last == "00" {
 				wr.SetDelta(120)
@@ -132,7 +153,7 @@ func main() {
 		}
 		p.Title.Text = "histogram plot"
 
-		histogram, err := plotter.NewHist(value, 4)
+		histogram, err := plotter.NewHist(value.Values, 4)
 		if err != nil {
 			panic(err)
 		}
@@ -141,6 +162,25 @@ func main() {
 		err = p.Save(8*vg.Inch, 8*vg.Inch, fmt.Sprintf("%s_historgram.png", key))
 		if err != nil {
 			panic(err)
+		}
+	}
+	sorted := make([]Value, 0, 8)
+	for _, value := range values {
+		sorted = append(sorted, value)
+	}
+	sort.Slice(sorted, func(i, j int) bool {
+		return sorted[i].Name < sorted[j].Name
+	})
+	for _, value := range sorted {
+		key := value.Name
+		sum, total := make([]int, 4), 0
+		for _, v := range value.Values {
+			sum[int(v)]++
+			total++
+		}
+		fmt.Println(key)
+		for key, value := range sum {
+			fmt.Printf("%d %f\n", key, float64(value)/float64(total))
 		}
 	}
 	p := plot.New()
@@ -158,5 +198,14 @@ func main() {
 	err = p.Save(8*vg.Inch, 8*vg.Inch, "historgram.png")
 	if err != nil {
 		panic(err)
+	}
+	sum, total := make([]int, 4), 0
+	for _, v := range v {
+		sum[int(v)]++
+		total++
+	}
+	fmt.Println("total")
+	for key, value := range sum {
+		fmt.Printf("%d %f\n", key, float64(value)/float64(total))
 	}
 }
