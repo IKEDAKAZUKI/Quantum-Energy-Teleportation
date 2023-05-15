@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"math"
 	"sort"
 	"strings"
 
@@ -210,6 +211,15 @@ func main() {
 	sort.Slice(sorted, func(i, j int) bool {
 		return sorted[i].Name < sorted[j].Name
 	})
+	h := make([]float64, 4)
+	sum, total := make([]int, 4), 0
+	for _, v := range v {
+		sum[int(v)]++
+		total++
+	}
+	for key, value := range sum {
+		h[key] = float64(value) / float64(total)
+	}
 	for _, value := range sorted {
 		key := value.Name
 		sum, total := make([]int, 4), 0
@@ -217,7 +227,12 @@ func main() {
 			sum[int(v)]++
 			total++
 		}
-		fmt.Println(key, len(value.Values))
+		difference := 0.0
+		for key, value := range h {
+			difference += math.Abs(value - float64(sum[key])/float64(total))
+		}
+		difference /= float64(len(h))
+		fmt.Println(key, difference, len(value.Values))
 		for key, value := range sum {
 			fmt.Printf("%d %f\n", key, float64(value)/float64(total))
 		}
@@ -238,13 +253,8 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	sum, total := make([]int, 4), 0
-	for _, v := range v {
-		sum[int(v)]++
-		total++
-	}
 	fmt.Println("total")
-	for key, value := range sum {
-		fmt.Printf("%d %f\n", key, float64(value)/float64(total))
+	for key, value := range h {
+		fmt.Printf("%d %f\n", key, value)
 	}
 }
