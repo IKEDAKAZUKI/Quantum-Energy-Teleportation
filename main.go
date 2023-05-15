@@ -52,21 +52,60 @@ func main() {
 		Values plotter.Values
 	}
 	values := make(map[string]Value)
-	values["00"] = Value{
-		Name: "00",
+	values["0000"] = Value{
+		Name: "0000",
 	}
-	values["01"] = Value{
-		Name: "01",
+	values["0001"] = Value{
+		Name: "0001",
 	}
-	values["10"] = Value{
-		Name: "10",
+	values["0010"] = Value{
+		Name: "0010",
 	}
-	values["11"] = Value{
-		Name: "11",
+	values["0011"] = Value{
+		Name: "0011",
+	}
+
+	values["0100"] = Value{
+		Name: "0100",
+	}
+	values["0101"] = Value{
+		Name: "0101",
+	}
+	values["0110"] = Value{
+		Name: "0110",
+	}
+	values["0111"] = Value{
+		Name: "0111",
+	}
+
+	values["1000"] = Value{
+		Name: "1000",
+	}
+	values["1001"] = Value{
+		Name: "1001",
+	}
+	values["1010"] = Value{
+		Name: "1010",
+	}
+	values["1011"] = Value{
+		Name: "1011",
+	}
+
+	values["1100"] = Value{
+		Name: "1100",
+	}
+	values["1101"] = Value{
+		Name: "1101",
+	}
+	values["1110"] = Value{
+		Name: "1110",
+	}
+	values["1111"] = Value{
+		Name: "1111",
 	}
 	v := plotter.Values{}
 	err = writer.WriteSMF("markov.mid", 1, func(wr *writer.SMF) error {
-		last := ""
+		context := [2]string{"00", "00"}
 		for _, line := range lines {
 			bits := []byte(line)
 			if len(bits) != 2 {
@@ -74,15 +113,14 @@ func main() {
 			}
 			i := float64((bits[1] - '0') + 2*(bits[0]-'0'))
 			v = append(v, i)
-			if last == "" {
-				v := values["00"]
-				v.Values = append(values["00"].Values, i)
-				values["00"] = v
-			} else {
-				v := values[last]
-				v.Values = append(values[last].Values, i)
-				values[last] = v
+			c := ""
+			for _, value := range context {
+				c += value
 			}
+			v := values[c]
+			v.Values = append(values[c].Values, i)
+			values[c] = v
+			last := context[len(context)-1]
 			if last == "" || last == "00" {
 				wr.SetDelta(120)
 				wr.SetDelta(240)
@@ -135,7 +173,8 @@ func main() {
 				}
 				wr.SetDelta(240)
 			}
-			last = line
+			copy(context[:len(context)-1], context[1:])
+			context[len(context)-1] = line
 		}
 
 		writer.EndOfTrack(wr)
@@ -178,7 +217,7 @@ func main() {
 			sum[int(v)]++
 			total++
 		}
-		fmt.Println(key)
+		fmt.Println(key, len(value.Values))
 		for key, value := range sum {
 			fmt.Printf("%d %f\n", key, float64(value)/float64(total))
 		}
