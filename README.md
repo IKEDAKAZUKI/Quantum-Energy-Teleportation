@@ -18,4 +18,5 @@ IBM Quantum website: https://www.ibm.com/quantum
 
 A new demonstration with latest error mitigations (M3, dynamical decoupling, pauli twirling) has been added into "Latest update 2025".
 The codes are compatible with the lates Qiskit version 1.4.0. 
-Documentation: Ikeda, Kazuki, "Quantum Games and Economics through Teleportation" (March 06, 2025). Available at SSRN: https://ssrn.com/abstract=5168193
+
+Documentation: K. Ikeda, "Quantum Games and Economics through Teleportation" (March 06, 2025). Available at SSRN: https://ssrn.com/abstract=5168193
