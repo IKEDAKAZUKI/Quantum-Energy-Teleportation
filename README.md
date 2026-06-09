@@ -9,7 +9,8 @@ All resources are free to use.
 
 Original paper: 
 K. Ikeda, "Demonstration of quantum energy teleportation on superconducting quantum hardware", Phys. Rev. Applied 20, 024051 (2023).
-https://doi.org/10.1103/PhysRevApplied.20.024051
+
+DOI: https://doi.org/10.1103/PhysRevApplied.20.024051
 
 arXiv link https://arxiv.org/abs/2301.02666
 
