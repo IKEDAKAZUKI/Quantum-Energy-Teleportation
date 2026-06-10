@@ -190,7 +190,6 @@ Qiskit 1.4.0
 │   ├── QET.py
 │   ├── QET_Experiment_Estimator.ipynb
 │   └── QET_Experiment_M3_Error_Mitigation.ipynb
-├── Documentation/
 ├── PRApplied.pdf
 ├── QET slides.gif
 ├── QET slides.pdf
