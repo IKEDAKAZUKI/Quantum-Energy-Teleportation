@@ -21,4 +21,6 @@ A new demonstration with latest error mitigations (M3, dynamical decoupling, pau
 The codes are compatible with the lates Qiskit version 1.4.0. 
 
 Documentation: K. Ikeda, "Quantum Games and Economics through Teleportation" (March 06, 2025). Available at SSRN: https://ssrn.com/abstract=5168193
+
+
 <img src="QET%20slides.gif" width="70%" alt="QET slides">
