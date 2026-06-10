@@ -239,14 +239,19 @@ IBM Quantum website:
 If you use this repository in your research, please cite:
 
 ```bibtex
-@article{Ikeda2023QET,
-  author  = {Ikeda, K.},
-  title   = {Demonstration of quantum energy teleportation on superconducting quantum hardware},
-  journal = {Physical Review Applied},
-  volume  = {20},
-  pages   = {024051},
-  year    = {2023},
-  doi     = {10.1103/PhysRevApplied.20.024051}
+@article{PhysRevApplied.20.024051,
+  title = {Demonstration of Quantum Energy Teleportation on Superconducting Quantum Hardware},
+  author = {Ikeda, Kazuki},
+  journal = {Phys. Rev. Appl.},
+  volume = {20},
+  issue = {2},
+  pages = {024051},
+  numpages = {12},
+  year = {2023},
+  month = {Aug},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevApplied.20.024051},
+  url = {https://link.aps.org/doi/10.1103/PhysRevApplied.20.024051}
 }
 ```
 
