@@ -22,5 +22,4 @@ The codes are compatible with the lates Qiskit version 1.4.0.
 
 Documentation: K. Ikeda, "Quantum Games and Economics through Teleportation" (March 06, 2025). Available at SSRN: https://ssrn.com/abstract=5168193
 
-<img src="[スライドのパス/presentation.gif](https://github.com/IKEDAKAZUKI/Quantum-Energy-Teleportation/blob/main/QET%20slides.gif
-)" width="100%">
+![QET slides](QET%20slides.gif)
