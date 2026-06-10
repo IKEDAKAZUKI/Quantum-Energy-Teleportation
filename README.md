@@ -24,3 +24,5 @@ Documentation: K. Ikeda, "Quantum Games and Economics through Teleportation" (Ma
 
 
 <img src="QET%20slides.gif" width="70%" alt="QET slides">
+
+The slides are also available in Slideshare https://www.slideshare.net/slideshow/overview-of-quantum-energy-teleportation/287987616
