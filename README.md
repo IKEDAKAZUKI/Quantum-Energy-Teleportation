@@ -2,7 +2,7 @@
 
 # Quantum Energy Teleportation
 
-### Reproducible quantum-circuit demonstrations of quantum energy teleportation on IBM Quantum hardware and local simulators
+### The world's first zero temperature Quantum Energy Teleportation with superconducting qubits
 
 [![DOI](https://img.shields.io/badge/DOI-10.1103%2FPhysRevApplied.20.024051-blue)](https://doi.org/10.1103/PhysRevApplied.20.024051)
 [![arXiv](https://img.shields.io/badge/arXiv-2301.02666-b31b1b.svg)](https://arxiv.org/abs/2301.02666)
