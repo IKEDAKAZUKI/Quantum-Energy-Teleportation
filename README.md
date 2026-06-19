@@ -264,6 +264,12 @@ This project is released under the [MIT License](LICENSE).
 
 ---
 
+## Funding
+
+The work was supported by the U.S. Department of Energy, Office of Science, National Quantum Information Science Research Centers, Co-design Center for Quantum Advantage (C2QA) under Contract No.DESC0012704.
+
+---
+
 <div align="center">
 
 **Quantum Energy Teleportation · IBM Quantum · Qiskit · Error Mitigation**
