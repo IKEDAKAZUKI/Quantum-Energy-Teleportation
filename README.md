@@ -208,14 +208,12 @@ Qiskit 1.4.0
 
 ## Documentation and slides
 
-Slides:
+### Slides
 
 - [Overview of Quantum Energy Teleportation — SlideShare](https://www.slideshare.net/slideshow/overview-of-quantum-energy-teleportation/287987616)
 - [`QET slides.pdf`](QET%20slides.pdf)
 
----
 
-## References
 
 ### Main experimental paper
 
@@ -224,15 +222,6 @@ K. Ikeda,
 *Physical Review Applied* **20**, 024051 (2023).  
 DOI: [10.1103/PhysRevApplied.20.024051](https://doi.org/10.1103/PhysRevApplied.20.024051)  
 arXiv: [2301.02666](https://arxiv.org/abs/2301.02666)
-
-### IBM Quantum
-
-IBM Quantum website:  
-[https://www.ibm.com/quantum](https://www.ibm.com/quantum)
-
----
-
-## Citation
 
 If you use this repository in your research, please cite:
 
@@ -254,6 +243,12 @@ If you use this repository in your research, please cite:
 ```
 
 You can also use the included [`CITATION.cff`](CITATION.cff) file.
+
+### IBM Quantum
+
+IBM Quantum website:  
+[https://www.ibm.com/quantum](https://www.ibm.com/quantum)
+
 
 ---
 
