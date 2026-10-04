@@ -206,8 +206,8 @@ Additional documentation:
 
 > K. Ikeda,  
 > **“Quantum Games and Economics through Teleportation”**  
-> March 06, 2025.  
-> SSRN: [https://ssrn.com/abstract=5168193](https://ssrn.com/abstract=5168193)
+> Quantum Information Processing 25, 331 (2026). [https://doi.org/10.1007/s11128-026-05341-8](https://doi.org/10.1007/s11128-026-05341-8)
+> SSRN (March 06, 2025): [https://ssrn.com/abstract=5168193](https://ssrn.com/abstract=5168193)
 
 Slides:
 
