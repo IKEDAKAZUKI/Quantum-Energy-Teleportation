@@ -178,6 +178,12 @@ The 2025 update was tested with:
 ```text
 Qiskit 1.4.0
 ```
+### Documentation for update 2025
+> K. Ikeda,  
+> **“Quantum Games and Economics through Teleportation”**  
+> Quantum Information Processing 25, 331 (2026). [https://doi.org/10.1007/s11128-026-05341-8](https://doi.org/10.1007/s11128-026-05341-8)
+> SSRN (March 06, 2025): [https://ssrn.com/abstract=5168193](https://ssrn.com/abstract=5168193)
+
 
 ---
 
@@ -201,13 +207,6 @@ Qiskit 1.4.0
 ---
 
 ## Documentation and slides
-
-Additional documentation:
-
-> K. Ikeda,  
-> **“Quantum Games and Economics through Teleportation”**  
-> Quantum Information Processing 25, 331 (2026). [https://doi.org/10.1007/s11128-026-05341-8](https://doi.org/10.1007/s11128-026-05341-8)
-> SSRN (March 06, 2025): [https://ssrn.com/abstract=5168193](https://ssrn.com/abstract=5168193)
 
 Slides:
 
